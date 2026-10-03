@@ -1,0 +1,42 @@
+name: Sync README to docs
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-readme
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Copy README.md to docs/index.md
+        run: |
+          mkdir -p docs
+          cp README.md docs/index.md
+          # Jekyll's kramdown does not parse markdown inside block HTML, so anything
+          # wrapped in a <div> (the title, the footer) would be published as literal text.
+          sed -i '/<div/ { /markdown=/! s|^\(<div[^>]*\)>$|\1 markdown="1">|; }' docs/index.md
+
+      - name: Commit and push
+        run: |
+          git add docs/index.md
+          if git diff --cached --quiet -- docs/index.md; then
+            echo "docs/index.md already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "docs: sync README.md to docs/index.md"
+          git push
