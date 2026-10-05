@@ -176,8 +176,9 @@ needs no server and no installation, and works on a desktop as well as on a phon
 ## Zenn Articles
 
 In-depth technical write-ups — long-form,
-run-an-example-first tutorials on Go systems programming, networking, and security. Each repo pairs a full article
-with complete, runnable sample code.
+run-an-example-first tutorials on Go systems programming, networking, and security. Each entry links to the
+companion repo where one exists — pairing a full article with complete, runnable sample code — or to the
+article itself.
 
 #### [low-level-networking](https://github.com/gz-zenn/low-level-networking)
 **Low-Level Networking in Go: Forging Packets, Decoding Bytes, and Building Custom Protocols**
@@ -233,6 +234,38 @@ actions/tasks, scraping JavaScript-heavy sites, screenshots, PDFs, and end-to-en
 **Using C Libraries in Go**
 A primer on **cgo**, then builds an MP4 inspector that uses FFmpeg's C libraries (libavformat/avcodec/avutil) to
 list video, audio, and subtitle streams plus chapters.
+
+#### [go-annotations](https://github.com/gz-zenn/go-annotations)
+**Go Annotations: A Practical Guide to //go: Directives**
+Go has no `@Override` or `[Serializable]` — it has compiler directives. Explains what actually makes a `//go:`
+comment a directive rather than a plain comment, then covers `//go:generate`, `//go:build`, `//go:embed`,
+`//go:noinline`, `//go:noescape`, `//go:linkname` and `//go:nosplit`, each with runnable examples.
+
+#### [fuzzy-testing](https://github.com/gz-zenn/fuzzy-testing)
+**Fuzzy Testing in Go**
+Go's built-in fuzzing (since 1.18) with no external dependencies — `*testing.F` seed corpora and `f.Fuzz`
+callbacks, worked examples fuzzing a JSON parser, a URL parser, a math function and byte slices, a real bug the
+fuzzer found in the author's own code, and how to run, bound and triage fuzz targets.
+
+#### [How the Go Compiler Optimizes Your Code](https://zenn.dev/giuliano/articles/ef700596221879)
+Walks the passes that make naive-looking Go fast — escape analysis, inlining, bounds-check elimination, dead code
+and constant folding, function specialization and devirtualization — and the code patterns that silently defeat
+them, with a before/after example and a practical checklist.
+
+#### [Go metadata injection](https://zenn.dev/gvatech_blog/articles/436210391b5be3)
+Injects a version, Git commit hash and build time into a binary at compile time with
+`go build -ldflags "-X"` — without changing a single line of code — plus the Makefile plumbing that automates it.
+
+#### [How FIDO2 Works](https://zenn.dev/giuliano/articles/12008f37101d63)
+The standard behind passkeys, security keys and Windows Hello: WebAuthn vs CTAP2, the registration (attestation)
+and authentication (assertion) ceremonies, what's actually inside the data, why it resists phishing, and a full
+relying-party server built in Go with `go-webauthn` — begin/finish for both ceremonies and the key security
+properties to get right.
+
+#### [How Screen Readers "Read" Web Pages](https://zenn.dev/giuliano/articles/fc07a8a5130edb)
+Screen readers never see the DOM — they consume the **accessibility tree**. Explains the DOM → a11y tree → OS API →
+speech pipeline, why DOM order and semantics matter more than visual appearance, how accessible names are
+computed, and the most common errors and their fixes.
 
 ---
 
