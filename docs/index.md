@@ -177,72 +177,59 @@ needs no server and no installation, and works on a desktop as well as on a phon
 
 In-depth technical write-ups — long-form,
 run-an-example-first tutorials on Go systems programming, networking, and security. Each title links to the
-article on Zenn, with the companion GitHub repo linked underneath where one exists — every repo pairs the full
-article with complete, runnable sample code.
+article on Zenn, with a GitHub icon next to the title linking to the companion repo where one exists — every repo
+pairs the full article with complete, runnable sample code.
 
-#### [Low-Level Networking in Go: Forging Packets, Decoding Bytes, and Building Custom Protocols](https://zenn.dev/gvatech_blog/articles/e257f6fbef5070)
-[low-level-networking](https://github.com/gz-zenn/low-level-networking)
+#### [Low-Level Networking in Go: Forging Packets, Decoding Bytes, and Building Custom Protocols](https://zenn.dev/gvatech_blog/articles/e257f6fbef5070) <a href="https://github.com/gz-zenn/low-level-networking" title="low-level-networking"><img src="https://cdn.simpleicons.org/github/000/fff" width="16" height="16" alt="low-level-networking"></a>
 Goes below `net.Conn` — encoding custom binary protocols over UDP/TCP, reading raw Ethernet frames with
 `x/net/ipv4`, and hand-crafting IP/ICMP packets (including checksums) with `gopacket`.
 
-#### Hardening Web Applications with WebAssembly: A Practical Security Approach
-[wasm](https://github.com/gz-zenn/wasm)
+#### Hardening Web Applications with WebAssembly: A Practical Security Approach <a href="https://github.com/gz-zenn/wasm" title="wasm"><img src="https://cdn.simpleicons.org/github/000/fff" width="16" height="16" alt="wasm"></a>
 Makes the case for WebAssembly as a security tool (not just a performance one): sandboxing untrusted code,
 isolating memory, and running the same Go validator compiled to Wasm on both client and server.
 
-#### Building Custom Struct Tags in Go: A Practical Guide
-[struct-tags](https://github.com/gz-zenn/struct-tags)
+#### Building Custom Struct Tags in Go: A Practical Guide <a href="https://github.com/gz-zenn/struct-tags" title="struct-tags"><img src="https://cdn.simpleicons.org/github/000/fff" width="16" height="16" alt="struct-tags"></a>
 Explains how struct tags work under the hood via `reflect`, then builds a working reflection-based `validate` tag
 library for API request validation.
 
-#### Automating TLS Certificate Renewal in Go with Cloudflare DNS-01 Validation
-[tls-renew](https://github.com/gz-zenn/tls-renew)
+#### Automating TLS Certificate Renewal in Go with Cloudflare DNS-01 Validation <a href="https://github.com/gz-zenn/tls-renew" title="tls-renew"><img src="https://cdn.simpleicons.org/github/000/fff" width="16" height="16" alt="tls-renew"></a>
 Builds a Go ACME client with `go-acme/lego` that obtains and auto-renews (wildcard) Let's Encrypt certificates
 using Cloudflare DNS-01 validation, with a daily expiry-check background loop.
 
-#### [Building HTTP/3 Services in Go](https://zenn.dev/gvatech_blog/articles/e0573c32ac59e7)
-[http3](https://github.com/gz-zenn/http3)
+#### [Building HTTP/3 Services in Go](https://zenn.dev/gvatech_blog/articles/e0573c32ac59e7) <a href="https://github.com/gz-zenn/http3" title="http3"><img src="https://cdn.simpleicons.org/github/000/fff" width="16" height="16" alt="http3"></a>
 Covers why HTTP/3/QUIC matters (0-RTT handshakes, no head-of-line blocking, connection migration) and stands up
 production `http3` servers and clients with `quic-go`.
 
-#### [Building a Simple P2P / Multi-Node Service with LAN Auto-Discovery in Go](https://zenn.dev/giuliano/articles/9a83044b4ebe74)
-[p2p](https://github.com/gz-zenn/p2p)
+#### [Building a Simple P2P / Multi-Node Service with LAN Auto-Discovery in Go](https://zenn.dev/giuliano/articles/9a83044b4ebe74) <a href="https://github.com/gz-zenn/p2p" title="p2p"><img src="https://cdn.simpleicons.org/github/000/fff" width="16" height="16" alt="p2p"></a>
 Implements UDP multicast discovery (`239.0.0.0/8`) for nodes to find each other on a LAN, then TCP for reliable
 messaging — complete, runnable, dependency-free example.
 
-#### Using PGP with Go
-[pgp](https://github.com/gz-zenn/pgp)
+#### Using PGP with Go <a href="https://github.com/gz-zenn/pgp" title="pgp"><img src="https://cdn.simpleicons.org/github/000/fff" width="16" height="16" alt="pgp"></a>
 A history of PGP / OpenPGP and a practical guide using the maintained `ProtonMail/go-crypto` package — key-pair
 generation, encryption, and signature verification across runnable `examples/` modules.
 
-#### Real-Time Feature Flags in Go: How and Why
-[feature-flags](https://github.com/gz-zenn/feature-flags)
+#### Real-Time Feature Flags in Go: How and Why <a href="https://github.com/gz-zenn/feature-flags" title="feature-flags"><img src="https://cdn.simpleicons.org/github/000/fff" width="16" height="16" alt="feature-flags"></a>
 Shows why flag toggling must be real-time (kill switches, progressive rollouts, targeting, A/B tests) and builds a
 thread-safe in-memory store with streaming sync — from simple `atomic.Value` to production-grade setups.
 
-#### [Newbie vs. Pro vs. Enterprise Go: How Code Evolves as Skill Grows](https://zenn.dev/giuliano/articles/69cb623bd7f3ac)
-[newbie-vs-pro-code](https://github.com/gz-zenn/newbie-vs-pro-code)
+#### [Newbie vs. Pro vs. Enterprise Go: How Code Evolves as Skill Grows](https://zenn.dev/giuliano/articles/69cb623bd7f3ac) <a href="https://github.com/gz-zenn/newbie-vs-pro-code" title="newbie-vs-pro-code"><img src="https://cdn.simpleicons.org/github/000/fff" width="16" height="16" alt="newbie-vs-pro-code"></a>
 Walks the same problem (reading users and fetching profile data) at three maturity levels, demonstrating how error
 handling, package structure, concurrency, and maintainability improve with experience.
 
-#### [Browser Automation in Go with chromedp](https://zenn.dev/gvatech_blog/articles/18e241597ed711)
-[chromedp](https://github.com/gz-zenn/chromedp)
+#### [Browser Automation in Go with chromedp](https://zenn.dev/gvatech_blog/articles/18e241597ed711) <a href="https://github.com/gz-zenn/chromedp" title="chromedp"><img src="https://cdn.simpleicons.org/github/000/fff" width="16" height="16" alt="chromedp"></a>
 Drives Chrome via the Chrome DevTools Protocol from pure Go — no Selenium or WebDriver — covering contexts,
 actions/tasks, scraping JavaScript-heavy sites, screenshots, PDFs, and end-to-end tests.
 
-#### [Using C Libraries in Go](https://zenn.dev/gvatech_blog/articles/604b2e0e800881)
-[videoinfo](https://github.com/gz-zenn/videoinfo)
+#### [Using C Libraries in Go](https://zenn.dev/gvatech_blog/articles/604b2e0e800881) <a href="https://github.com/gz-zenn/videoinfo" title="videoinfo"><img src="https://cdn.simpleicons.org/github/000/fff" width="16" height="16" alt="videoinfo"></a>
 A primer on **cgo**, then builds an MP4 inspector that uses FFmpeg's C libraries (libavformat/avcodec/avutil) to
 list video, audio, and subtitle streams plus chapters.
 
-#### [Go Annotations: A Practical Guide to //go: Directives](https://zenn.dev/gvatech_blog/articles/a52edeab3ab663)
-[go-annotations](https://github.com/gz-zenn/go-annotations)
+#### [Go Annotations: A Practical Guide to //go: Directives](https://zenn.dev/gvatech_blog/articles/a52edeab3ab663) <a href="https://github.com/gz-zenn/go-annotations" title="go-annotations"><img src="https://cdn.simpleicons.org/github/000/fff" width="16" height="16" alt="go-annotations"></a>
 Go has no `@Override` or `[Serializable]` — it has compiler directives. Explains what actually makes a `//go:`
 comment a directive rather than a plain comment, then covers `//go:generate`, `//go:build`, `//go:embed`,
 `//go:noinline`, `//go:noescape`, `//go:linkname` and `//go:nosplit`, each with runnable examples.
 
-#### [Fuzzy Testing in Go](https://zenn.dev/gvatech_blog/articles/3d865ee9924c65)
-[fuzzy-testing](https://github.com/gz-zenn/fuzzy-testing)
+#### [Fuzzy Testing in Go](https://zenn.dev/gvatech_blog/articles/3d865ee9924c65) <a href="https://github.com/gz-zenn/fuzzy-testing" title="fuzzy-testing"><img src="https://cdn.simpleicons.org/github/000/fff" width="16" height="16" alt="fuzzy-testing"></a>
 Go's built-in fuzzing (since 1.18) with no external dependencies — `*testing.F` seed corpora and `f.Fuzz`
 callbacks, worked examples fuzzing a JSON parser, a URL parser, a math function and byte slices, a real bug the
 fuzzer found in the author's own code, and how to run, bound and triage fuzz targets.
