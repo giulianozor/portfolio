@@ -184,7 +184,7 @@ pairs the full article with complete, runnable sample code.
 Goes below `net.Conn` — encoding custom binary protocols over UDP/TCP, reading raw Ethernet frames with
 `x/net/ipv4`, and hand-crafting IP/ICMP packets (including checksums) with `gopacket`.
 
-#### Hardening Web Applications with WebAssembly: A Practical Security Approach <a href="https://github.com/gz-zenn/wasm" title="wasm"><img src="https://cdn.simpleicons.org/github/000/fff" width="16" height="16" alt="wasm"></a>
+#### [Hardening Web Applications with WebAssembly: A Practical Security Approach](https://zenn.dev/gvatech_blog/articles/d3a40317716269) <a href="https://github.com/gz-zenn/wasm" title="wasm"><img src="https://cdn.simpleicons.org/github/000/fff" width="16" height="16" alt="wasm"></a>
 Makes the case for WebAssembly as a security tool (not just a performance one): sandboxing untrusted code,
 isolating memory, and running the same Go validator compiled to Wasm on both client and server.
 
