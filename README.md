@@ -108,10 +108,6 @@ A fast, self-hosted web-based **file browser** with a dark theme, built in Go wi
   a single binary with embedded assets.
 - **Use case**: Running a private, multi-user file browser with per-user jails and lossless video clipping.
 
----
-
-### Productivity & System Tools
-
 #### [regex-renamer](https://github.com/giulianozor/regex-renamer)
 Batch-renames files and folders using a chain of regex rules defined in **YAML**.
 
